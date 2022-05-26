@@ -30,8 +30,9 @@ const Home: NextPage = () => {
   function setColortoSvg(c: string) {
     if (svgPathSelected !== "") {
       document.querySelector(svgPathSelected)?.setAttribute("fill", c);
+      const w: any = document.querySelector(svgPathSelected)?.attributes
       setcolorSelected(
-        document.querySelector(svgPathSelected)?.attributes.fill.value
+        w.fill.value
       );
     }
   }
